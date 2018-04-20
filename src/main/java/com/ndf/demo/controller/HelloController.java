@@ -39,8 +39,7 @@ public class HelloController {
     @RequestMapping(value = "/testException")
     @ResponseBody
     public Response<Integer> testException(HttpServletRequest request, HttpServletResponse response) throws Exception{
-        int[] arr = {1,2,3};
-        throw new RestApiException("error", "111", "error");
+        throw new RestApiException("111", "test exception");
     }
 
 }

@@ -12,14 +12,14 @@ public class RestApiException extends Exception {
     public RestApiException() {
     }
 
-    public RestApiException(String message, String errCode, String errMsg) {
-        super(message);
+    public RestApiException( String errCode, String errMsg) {
+        super(errMsg);
         this.errCode = errCode;
         this.errMsg = errMsg;
     }
 
-    public RestApiException(String message, Throwable cause, String errCode, String errMsg) {
-        super(message, cause);
+    public RestApiException(String errCode, String errMsg, Throwable cause) {
+        super(errMsg, cause);
         this.errCode = errCode;
         this.errMsg = errMsg;
     }
