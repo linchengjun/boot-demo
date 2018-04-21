@@ -42,7 +42,7 @@ public class CustomSecurityConfig extends WebSecurityConfigurerAdapter
         http
                 .authorizeRequests()
                     .antMatchers("/css/**", "/image/**", "/js/**", "favicon.ico"
-                        , "/register", "/error"
+                        , "/register", "/error", "/actuator/**"
                         , "/defConfig", "/hello", "/testException", "/limit").permitAll()
                     .anyRequest().authenticated()
                     .and()
