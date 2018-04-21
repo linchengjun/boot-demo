@@ -6,6 +6,6 @@
 </head>
 <body>
 <h1>FreeMarker模板演示</h1>
-<pre>Hello ${name} , time :${time}</pre>
+<pre>Hello ${name?default('')} , time :${time?default('')}</pre>
 </body>
 </html>

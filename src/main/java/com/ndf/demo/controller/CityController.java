@@ -18,7 +18,7 @@ public class CityController {
     @Autowired
     private CityMapper cityMapper;
 
-    @RequestMapping(value = "/queryByName", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/city/queryByName", method = RequestMethod.GET)
     public Response<City> queryByName(@RequestParam("city_name") String cityName){
         if(StringUtils.isBlank(cityName)){
             return new Response<>();
