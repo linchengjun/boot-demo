@@ -31,7 +31,7 @@ public class HelloWorldController {
 
 ### 如何运行
 - IntelliJ IDEA右键Run
-- spring-boot:run
+- mvn spring-boot:run
 
 ### 2.starter依赖
 	web
