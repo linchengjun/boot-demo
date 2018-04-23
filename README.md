@@ -46,7 +46,7 @@ public class HelloWorldController {
 2. java:comp/env里的JNDI属性
 3. JVM系统属性
 4. 操作系统环境变量
-5. 随机生成的带random.*前缀的属性（在设置其他属性时，可以引用它们，比如${random.long}）
+5. 随机生成的带random.*前缀的属性（在设置其他属性时，可以引用它们，比如`${random.long}`)
 6. 应用程序以外的application.properties或者appliaction.yml文件
 7. 打包在应用程序内的application.properties或者appliaction.yml文件
 8. 通过@PropertySource标注的属性源
@@ -86,6 +86,7 @@ management.endpoint.metrics.enabled=true
 
 ### 5.完整的项目
 - spring-security使用演示
+    + 自定义CustomAuthenticationProvider，增加登录失败次数限制
 	+ 禁用csrf
 		* HttpSecurity.csrf().disable()
 	+ 默认打开csrf
@@ -110,6 +111,8 @@ management.endpoint.metrics.enabled=true
 
 注意事项
 - 区分请求头信息
+- 默认浏览器打开，如果请求头部未传递`Content-Type: application/json`，即使restful接口是返回json数据，但发生异常的时候，走的是错误页面处理，而不是json的统一异常处理
+- 请求Header中的Content-Type设置为application/json，则发生异常的时候，会走json统一处理
 
 ### 7.相关资料
 - https://spring.io/guides
